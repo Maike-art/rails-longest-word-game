@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<%=if (@word_valid = true)%>
+    <p><strong>Congratulations!<%=@word%>is a valid english word!
+  <% elsif (@word != @letters.join)%>
+    <p>Sorry,but <strong> @word</strong> can`t be build out of <%=@letters.join%>
+  <% else %>
+    <p>Sorry, but <strong><%=@word%></strong>does not seem to be a valid english word...</p>
+<% end %>
+
+<%= link_to "What is the longest word you can find?", new_path %>
